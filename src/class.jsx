@@ -1,12 +1,13 @@
 import React from "react";
 class Car extends React.Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
+        this.state = {color : 'red'};
     }
 
     render() {
         return (
-            <div>Car Component</div>
+            <div>Car Component is {this.state.color}</div>
         );
     }
 }
