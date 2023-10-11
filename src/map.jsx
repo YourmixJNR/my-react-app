@@ -1,5 +1,3 @@
-import React from 'react';
-
 function Dad() {
   // Sample data - an array of items
   const items = ['Apple', 'Banana', 'Orange', 'Grapes', 'Mango'];

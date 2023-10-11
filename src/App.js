@@ -1,9 +1,12 @@
 import Dad from './map'
+import Car from './class';
 
 function App() {
   return (
-    
-    <Dad />
+    <>
+      <Car />
+      <Dad />
+    </>
   );
 }
 

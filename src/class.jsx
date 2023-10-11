@@ -1,8 +1,13 @@
 import React from "react";
-
 class Car extends React.Component {
-    return() {
-        <div>Car Component</div>
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return (
+            <div>Car Component</div>
+        );
     }
 }
 
