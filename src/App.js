@@ -1,12 +1,14 @@
-import Dad from './map'
-import Car from './class';
-import Lprops from './props';
+import Dad from './learn/map'
+import Car from './learn/class';
+import Lprops from './learn/props';
+import DefaultButton from './learn/button';
 
 function App() {
   return (
     <>
       <Car />
       <Dad />
+      <DefaultButton />
       <Lprops what="REACT" />
     </>
   );
