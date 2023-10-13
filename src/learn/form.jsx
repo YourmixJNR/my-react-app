@@ -2,6 +2,10 @@ import { useState } from "react";
 
 const MyForm = () => {
     const [name, setName] = useState("");
+
+    function handleChange(event) {
+        setName(event.target.value)
+    }
     
     function handleSubmit(event) {
         event.preventDefault();
@@ -14,7 +18,7 @@ const MyForm = () => {
                 <input
                 type="text"
                 value={name}
-                onChange={(e) => setName(e.target.value)}
+                onChange={handleChange}
                 />
                 <input
                 type="submit"
