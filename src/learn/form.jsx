@@ -1,31 +1,41 @@
 import { useState } from "react";
 
-const MyForm = () => {
-    const [name, setName] = useState("");
 
-    function handleChange(event) {
-        setName(event.target.value)
+function MyForm() {
+    const [inputs, setInputs] = useState({});
+  
+    const handleChange = (event) => {
+      const name = event.target.name;
+      const value = event.target.value;
+      setInputs(values => ({...values, [name]: value}))
     }
-    
-    function handleSubmit(event) {
-        event.preventDefault();
-        alert(`The name you entered was: ${name}`)
+  
+    const handleSubmit = (event) => {
+      event.preventDefault();
+      alert(JSON.stringify(inputs));
     }
-
-    return(
-        <div>
-            <form action="" onSubmit={handleSubmit}>
-                <input
-                type="text"
-                value={name}
-                onChange={handleChange}
-                />
-                <input
-                type="submit"
-                />
-            </form>
-        </div>
+  
+    return (
+      <form onSubmit={handleSubmit}>
+        <label>Enter your name:
+        <input 
+          type="text" 
+          name="username" 
+          value={inputs.username || ""} 
+          onChange={handleChange}
+        />
+        </label>
+        <label>Enter your age:
+          <input 
+            type="number" 
+            name="age" 
+            value={inputs.age || ""} 
+            onChange={handleChange}
+          />
+          </label>
+          <input type="submit" />
+      </form>
     )
-}
+  }
 
 export default MyForm;
