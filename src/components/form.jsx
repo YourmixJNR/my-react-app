@@ -1,4 +1,5 @@
 import { useState } from "react";
+import style from '..my-style.module.css'
 
 
 function MyForm() {
@@ -16,7 +17,7 @@ function MyForm() {
     }
   
     return (
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} style={style.bigblue}>
         <label>Enter your name:
         <input 
           type="text" 
