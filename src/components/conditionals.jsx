@@ -1,4 +1,4 @@
-import Country from '../learn/conditionals/conditional1'
+import Country from './conditionals/conditional1'
 
 const DisplayConditionals = () => {
     const state = ['Oyo', 'Lagos', 'Abuja']
