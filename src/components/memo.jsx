@@ -1,7 +1,7 @@
 import { useState } from "react";
-import DemoMemo from './React Memo'
+import DemoMemo from './React Memo/reactmemo'
 
-const memo = () => {
+const Memo = () => {
     const [count, setCount] = useState(0);
     const [todos, setTodos] = useState(['Todo 1', 'Todo 2']);
 
@@ -20,3 +20,5 @@ const memo = () => {
         </>
     )
 }
+
+export default Memo;
