@@ -1,20 +1,22 @@
-import Dad from './learn/map'
-import Car from './learn/class';
-import Lprops from './learn/props';
-import DefaultButton from './learn/button';
-import DisplayConditionals from './learn/conditionals'
-import MyForm from './learn/form';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./pages/layout";
+import Home from "./pages/home";
+import Blogs from "./pages/blogs";
+import Contact from "./pages/contact";
+import NoPage from "./pages/nopage";
 
 function App() {
   return (
-    <>
-      <Car />
-      <Dad />
-      <MyForm />
-      <DefaultButton />
-      <Lprops what="REACT" />
-      <DisplayConditionals />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="blogs" element={<Blogs />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
