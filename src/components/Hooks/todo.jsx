@@ -7,7 +7,7 @@ const Todos = ({ todos, addTodo}) => {
             {todos.map((todo, index) => {
                 return <p key={index}>{todo}</p>
             })}
-            <button onClick={addTodo}></button>
+            <button onClick={addTodo}>Add Todo</button>
         </>
     )
 }
