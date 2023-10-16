@@ -1,9 +1,11 @@
-import Motor from "../components/useState";
+import Motor from "../components/Hooks/useState";
+import Counter from "../components/Hooks/useEffect";
 
 const Hooks = () => {
     return (
         <>
             <Motor />
+            <Counter />
         </>
     )
 }
