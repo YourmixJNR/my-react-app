@@ -1,5 +1,4 @@
 import { useState, useMemo } from "react";
-import todo from "./todo";
 
 const UseMemo = () => {
     const [count, setCount] = useState(0)
@@ -12,7 +11,7 @@ const UseMemo = () => {
     };
 
     const increment = () => {
-        setCount((c) => {c + 1});
+        setCount((c) => c + 1);
     }
 
     return (
@@ -30,5 +29,13 @@ const UseMemo = () => {
         </>
     )
 }
+
+const expensiveCalculation = (num) => {
+    console.log("Calculating...");
+    for (let i = 0; i < 1000000000; i++) {
+      num += 1;
+    }
+    return num;
+};
 
 export default UseMemo;
