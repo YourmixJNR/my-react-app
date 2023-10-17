@@ -8,7 +8,11 @@ const UseMemo = () => {
     const calculation = useMemo(() => expensiveCalculation(count), [count]);
 
     const addTodo = () => {
-        setCount((t) => [...t, "New Todo"]);
+        setTodos((t) => [...t, "New Todo"]);
+    };
+
+    const increment = () => {
+        setCount((c) => {c + 1});
     }
 
     return (
@@ -17,7 +21,14 @@ const UseMemo = () => {
             {todos.map((todo, index) => {
                 return <div key={index}>{todo}</div>;
             })}
-            <button onClick={addTodo}></button>
+            <button onClick={addTodo}>Add Todo</button>
+            <hr />
+            <div>
+                Count: {count}
+                <button onClick={increment}>+</button>
+            </div>
         </>
     )
 }
+
+export default UseMemo;
